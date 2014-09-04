@@ -3,12 +3,12 @@
 exports.inject = function(app) {
 
   require('./../services/rest').inject(app);
-  app.controller('findById', exports.controller);
+  app.controller('registration', exports.controller);
 
   return exports.controller;
 };
 
-exports.controller = ['$scope', '$rest', function findById($scope, $rest) {
+exports.controller = ['$scope', '$rest', function registration($scope, $rest) {
 
     $scope.player = {};
     $scope.player.name = 'Vasya';

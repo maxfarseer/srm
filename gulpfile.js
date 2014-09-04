@@ -1,7 +1,6 @@
 'use strict';
 
 var gulp = require('gulp'),
-    //watch = require('gulp-watch'),
     jade = require('gulp-jade'),
     sass = require('gulp-sass'),
     jshint = require('gulp-jshint'),
@@ -16,7 +15,9 @@ var outputDir = 'builds/development',
 
 gulp.task('jade', function() {
   return gulp.src('src/templates/**/*.jade')
-    .pipe(jade())
+    .pipe(jade({
+      pretty: true
+    }))
     .pipe(gulp.dest(outputDir))
     .pipe(connect.reload());
 });
@@ -47,7 +48,7 @@ gulp.task('sass', function() {
     .pipe(connect.reload());
 });
 
-gulp.task('copyToBuild', function() {
+gulp.task('copyExternalCss', function() {
   return gulp.src('src/vendor/css/bootstrap.min.css')
     .pipe(gulp.dest(outputDir + '/css'));
 });
@@ -68,6 +69,14 @@ gulp.task('js', function() {
     b.on('update', function(){
       bundleShare(b);
     });
+
+    //not worked =/
+    b.on('error', function(err){
+      // print the error (can replace with gulp-util)
+      console.log(err.message);
+      // end this stream
+      this.end();
+    })
 
     //b.add('./src/js/main.js');
 
@@ -117,10 +126,10 @@ gulp.task('watch', ['js'], function() {
 gulp.task('connect', function() {
   connect.server({
     root: outputDir,
-    port: 8001,
+    port: 8002,
     livereload: true
   });
 });
 
-gulp.task('build', ['jade', 'jadeAngularTmpl', 'js', 'lint', 'jasmine', 'sass', 'watch',  'connect', 'copyToBuild']);
+gulp.task('build', ['jade', 'jadeAngularTmpl', 'js', 'lint', 'jasmine', 'sass', 'watch',  'connect', 'copyExternalCss']);
 gulp.task('default', ['jade', 'jadeAngularTmpl', 'sass', 'watch',  'connect']);

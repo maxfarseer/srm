@@ -1,0 +1,33 @@
+.row
+  .col-md-12
+    h4 Регистрация
+
+
+form.form-horizontal(role='form')
+  .form-group
+    label.col-sm-2.control-label(for='siteurl') URL
+    .col-sm-10
+      input#siteurl.form-control(type='text', placeholder='http://example.com')
+  .form-group
+    label.col-sm-2.control-label(for='regPhone') Телефон
+    .col-sm-10
+      input#regPhone.form-control(type='text', placeholder='+71234567890')
+  .form-group
+    label.col-sm-2.control-label(for='regUsername') Имя
+    .col-sm-10
+      input#regUsername.form-control(type='text', placeholder='Andrew')
+  .form-group
+    label.col-sm-2.control-label(for='regEmail') e-mail
+    .col-sm-10
+      input#regEmail.form-control(type='email', placeholder='andrew@gmail.com')
+  .form-group
+    label.col-sm-2.control-label(for='registrationPassword') Пароль
+    .col-sm-10
+      input#registrationPassword.form-control(type='password', placeholder='Password')
+  .form-group
+    label.col-sm-2.control-label(for='registrationPasswordCheck') Подтверждение пароля
+    .col-sm-10
+      input#registrationPasswordCheck.form-control(type='password', placeholder='Password')
+  .form-group
+    .col-sm-offset-2.col-sm-10
+      button.btn.btn-default(type='submit') Sign in

@@ -1,5 +1,5 @@
 doctype html
-html(ng-app="offlined")
+html(ng-app="srm")
   head
     title Gulp experiments
     link(rel="stylesheet" href="css/bootstrap.min.css")
@@ -10,18 +10,16 @@ html(ng-app="offlined")
       header
         nav.navbar.navbar-inverse(role='navigation')
           .navbar-header
-              a.navbar-brand(ui-sref='#') Pirates admin
+              a.navbar-brand(ui-sref='registration') SRM
             ul.nav.navbar-nav
               li
-                a(ui-sref='findbyid') Поиск по ID
+                a(ui-sref='registration') Регистрация
               li
-                a(ui-sref='playerprofile') Профиль игрока
+                a(ui-sref='jstest') JS test
               li
-                a(ui-sref='findbyclan') Поиск по Clan ID
+                a(ui-sref='administrator') Администратор
               li
-                a(ui-sref='clanprofile') Профиль клана
-              li
-                a(ui-sref='balance') Баланс
+                a(ui-sref='seller') Продавец
 
       div(ui-view)
       footer
