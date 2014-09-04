@@ -1,0 +1,41 @@
+{
+  "name": "gulp-experiments",
+  "version": "0.0.0",
+  "description": "gulp experiments",
+  "main": "index.js",
+  "dependencies": {},
+  "devDependencies": {
+    "gulp": "^3.8.7",
+    "gulp-jade": "^0.7.0",
+    "vinyl-source-stream": "^0.1.1",
+    "browserify": "^5.9.3",
+    "gulp-sass": "^0.7.2",
+    "gulp-connect": "^2.0.6",
+    "gulp-jshint": "^1.8.4",
+    "jshint-stylish": "^0.4.0",
+    "gulp-jasmine": "^0.3.0",
+    "jquery": "^2.1.1",
+    "angular": "^1.2.21",
+    "angular-ui-router": "^0.2.10",
+    "npm-angular-resource": "^1.3.0-build.2880",
+    "minifyify": "^4.1.1",
+    "watchify": "^1.0.2",
+    "gulp-watch": "^0.6.9"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/maxfarseer/gulp-experiments.git"
+  },
+  "keywords": [
+    "gulp"
+  ],
+  "author": "Max P",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/maxfarseer/gulp-experiments/issues"
+  },
+  "homepage": "https://github.com/maxfarseer/gulp-experiments"
+}

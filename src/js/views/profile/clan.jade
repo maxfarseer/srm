@@ -1,0 +1,55 @@
+.row
+  .col-md-12
+    h4 clan.id
+.row
+  .col-md-12
+    button.btn.btn-danger Удалить клан
+
+.row
+  .col-md-2 Name:
+  .col-md-4
+    input(type="text", ng-model="clan.name")
+.row
+  .col-md-2 Описание:
+  .col-md-4
+    textarea.form-control(rows="3", ng-mode="clan.description")
+.row
+  .col-md-2 Тип приема:
+  .col-md-4
+    select(ng-model="clan.receptionType", ng-options="type for type in clan.receptionTypes")
+.row
+  .col-md-2 Минимальный рейтинг:
+  .col-md-4
+    select(ng-model="clan.minRate", ng-options="rate for rate in clan.ratingsStep")
+
+.row
+  .col-md-3.col-md-offset-1 Участники
+  .col-md-3.col-md-offset-5 Участники clan.membersCount / clan.membersMax
+.row
+  .col-md-12
+    table.table.table-striped.table-bordered
+      thead
+        tr
+          th N
+          th ID
+          th Name
+          th HQ lvl
+          th Rating
+          th Del
+      tbody
+        tr
+          td 1
+          td clan.id
+          td clan.name
+          td clan.hqlvl
+          td clan.rating
+          td
+            button.btn.btn-sm.btn-danger -
+        tr
+          td 2
+          td clan.id
+          td clan.name
+          td clan.hqlvl
+          td clan.rating
+          td
+            button.btn.btn-sm.btn-danger -
