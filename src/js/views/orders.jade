@@ -1,0 +1,31 @@
+.row
+  .col-md-12
+    h4 Страница заказов
+
+hr
+
+.row
+  .col-md-12
+    table.table.table-striped.table-bordered
+      thead
+        tr
+          th OrderID
+          th Affiliation
+          th Revenue
+          th Shipping
+          th Tax
+          th Push UA
+          th Bought
+          th Created
+      tbody
+        tr(ng-repeat="order in orders")
+          td {{order.order_id}}
+          td {{order.affiliation}}
+          td {{order.revenue}}
+          td {{order.shipping}}
+          td {{order.tax}}
+          td
+            input(type="checkbox", ng-model="order.push_ua", ng-checked="{{order.push_ua}}")
+          td
+            input(type="checkbox", ng-model="order.bought", ng-checked="{{order.bought}}")
+          td {{order.created}}

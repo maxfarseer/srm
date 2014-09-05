@@ -1,39 +1,26 @@
 'use strict';
 
 exports.inject = function(app) {
+
+  //var ngResource = require('npm-angular-resource')(window,angular);
   app.factory('$rest', exports.factory);
   return exports.factory;
 };
 
-//exports.factory = function() {
+exports.factory = ['$resource', function ($resource) {
 
-  /*angular.module('offlined')
-  .factory('$rest', ['$resource', function ($resource) {
-
-    //var root = 'http://localhost:8888/asker/';
-    var root = 'https://scorching-fire-1793.firebaseapp.com/';
-
+    var root = 'http://localhost:8002/';
     var rest = {
-      questions: $resource(root+ 'json/questions.json', {}, {
+      orders: $resource(root+ 'json/orders.json', {}, {
         load: {method: 'GET'}
       }),
-      commentators: $resource(root+ 'json/commentators.json', {}, {
+      order: $resource(root+ 'json/order.json', {}, {
+        load: {method: 'GET'}
+      }),
+      users: $resource(root+ 'json/users.json', {}, {
         load: {method: 'GET'}
       })
     };
 
     return rest;
-  }])
-  ;*/
-
-//};
-
-exports.factory = function() {
-  var rest = {};
-
-    rest.qq = function(str) {
-      return '$rest ' + str;
-    };
-
-    return rest;
-};
+}];

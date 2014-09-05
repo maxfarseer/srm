@@ -1,0 +1,28 @@
+.row
+  .col-md-12
+    h4 Страница одного заказа
+
+hr
+
+.row
+  .col-md-12
+    table.table.table-striped.table-bordered
+      thead
+        tr
+          th Name
+          th SKU
+          th Category
+          th Price
+          th Quantity
+          th Bought
+          th Created
+      tbody
+        tr(ng-repeat="prop in order")
+          td {{prop.name}}
+          td {{prop.sku}}
+          td {{prop.category}}
+          td {{prop.price}}
+          td {{prop.quantity}}
+          td
+            input(type="checkbox", ng-model="prop.bought", ng-checked="{{prop.bought}}")
+          td {{prop.created}}

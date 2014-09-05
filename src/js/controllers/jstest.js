@@ -13,13 +13,10 @@ exports.controller = ['$scope', '$rest', function jsTest($scope, $rest) {
     var $ = require('jquery');
 
     // получить промо код
-    (function() {
-
+    /*(function() {
 
       var clientId;
-      /*ga(function(tracker) {
-        clientId = tracker.get('clientId');
-      });*/
+
       clientId = 123;
 
       var xhr = new XMLHttpRequest();
@@ -42,7 +39,7 @@ exports.controller = ['$scope', '$rest', function jsTest($scope, $rest) {
       outputElem.innerHTML = '...';
       xhr.send(null);
 
-    })();
+    })();*/
 
     // ---------
 

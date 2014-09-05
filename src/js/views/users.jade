@@ -1,0 +1,32 @@
+.row
+  .col-md-12
+    h4 Страница пользователей
+
+hr
+
+.row
+  .col-md-12
+    table.table.table-striped.table-bordered
+      thead
+        tr
+          th User_id (скрыто)
+          th Name
+          th Email
+          th Phone
+          th Position
+          th Administrator
+          th Edit
+          th Delete
+      tbody
+        tr(ng-repeat="user in users")
+          td {{user.user_id}}
+          td {{user.name}}
+          td {{user.email}}
+          td {{user.phone}}
+          td {{user.position}}
+          td
+            input(type="checkbox", ng-model="user.administrator", ng-checked="{{user.administrator}}")
+          td
+            button.btn.btn-success Edit
+          td
+            button.btn.btn-warning Del

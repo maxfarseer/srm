@@ -1,0 +1,37 @@
+.row
+  .col-md-12
+    h4 Добавить пользователя
+
+hr
+
+form.form-horizontal(role='form')
+  .form-group
+    label.col-sm-2.control-label(for='userName') Имя
+    .col-sm-10
+      input#userName.form-control(type='text', placeholder='Vasya')
+  .form-group
+    label.col-sm-2.control-label(for='userPhone') Телефон
+    .col-sm-10
+      input#userPhone.form-control(type='text', placeholder='+71234567890')
+  .form-group
+    label.col-sm-2.control-label(for='userEmail') E-mail
+    .col-sm-10
+      input#userEmail.form-control(type='email', placeholder='vasya@gmail.com')
+  .form-group
+    label.col-sm-2.control-label(for='userPosition') Позиция
+    .col-sm-10
+      input#userPosition.form-control(type='text', placeholder='Аналитик')
+  .form-group
+    .col-sm-2
+    .checkbox.col-sm-10
+      label(for="userIsAdmin")
+        input(id="userIsAdmin", type="checkbox", ng-model="user.admin")
+        | Администратор
+
+  .form-group
+    .col-sm-offset-2.col-sm-10
+      button.btn.btn-default(type='submit', ng-click="user.save()") Сохранить
+
+
+.row
+  .col-md-12 {{user.saveStatus}} | Администратор: {{user.admin}}

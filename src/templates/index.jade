@@ -1,7 +1,7 @@
 doctype html
 html(ng-app="srm")
   head
-    title Gulp experiments
+    title Banana CRM
     link(rel="stylesheet" href="css/bootstrap.min.css")
     link(rel="stylesheet", href="css/main.css")
   body
@@ -10,6 +10,7 @@ html(ng-app="srm")
       header
         nav.navbar.navbar-inverse(role='navigation')
           .navbar-header
+              img.navbar__logo(src="i/banan_32.png")
               a.navbar-brand(ui-sref='registration') SRM
             ul.nav.navbar-nav
               li
@@ -17,9 +18,15 @@ html(ng-app="srm")
               li
                 a(ui-sref='jstest') JS test
               li
-                a(ui-sref='administrator') Администратор
+                a(ui-sref='orders') Заказы
               li
-                a(ui-sref='seller') Продавец
+                a(ui-sref='order') Заказ (1)
+              li
+                a(ui-sref='addorder') Добавить заказ
+              li
+                a(ui-sref='users') Пользователи
+              li
+                a(ui-sref='adduser') Добавить пользователя
 
       div(ui-view)
       footer

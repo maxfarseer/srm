@@ -24,7 +24,9 @@ gulp.task('jade', function() {
 
 gulp.task('jadeAngularTmpl', function() {
   return gulp.src('src/js/views/**/*.jade')
-    .pipe(jade())
+    .pipe(jade({
+      pretty: true
+    }))
     .pipe(gulp.dest(outputDir+'/js/views/'))
     .pipe(connect.reload());
 });
@@ -53,6 +55,18 @@ gulp.task('copyExternalCss', function() {
     .pipe(gulp.dest(outputDir + '/css'));
 });
 
+gulp.task('copyTestJSON', function() {
+  return gulp.src('src/json/**/*.json')
+    .pipe(gulp.dest(outputDir + '/json'))
+    .pipe(connect.reload());
+});
+
+gulp.task('copyImages', function() {
+  return gulp.src('src/i/**/*.*')
+    .pipe(gulp.dest(outputDir + '/i'))
+    .pipe(connect.reload());
+});
+
 gulp.task('js', function() {
 
   function browserifyShare(){
@@ -76,7 +90,7 @@ gulp.task('js', function() {
       console.log(err.message);
       // end this stream
       this.end();
-    })
+    });
 
     //b.add('./src/js/main.js');
 
@@ -120,6 +134,7 @@ gulp.task('watch', ['js'], function() {
   gulp.watch('src/js/views/**/*.jade', ['jadeAngularTmpl']);
   gulp.watch('builds/development/js/bundle.js', ['lint']);
   gulp.watch('src/sass/**/*.scss', ['sass']);
+  gulp.watch('src/json/**/*.json', ['copyTestJSON']);
   //gulp.watch(['src/js/**/*.js','tests/*.js'], ['jasmine']);
 });
 
@@ -131,5 +146,5 @@ gulp.task('connect', function() {
   });
 });
 
-gulp.task('build', ['jade', 'jadeAngularTmpl', 'js', 'lint', 'jasmine', 'sass', 'watch',  'connect', 'copyExternalCss']);
-gulp.task('default', ['jade', 'jadeAngularTmpl', 'sass', 'watch',  'connect']);
+//gulp.task('build', ['jade', 'jadeAngularTmpl', 'js', 'lint', 'jasmine', 'sass', 'watch',  'connect', 'copyExternalCss']);
+gulp.task('default', ['jade', 'jadeAngularTmpl', 'sass', 'copyTestJSON', 'copyImages', 'copyExternalCss', 'watch', 'connect']);

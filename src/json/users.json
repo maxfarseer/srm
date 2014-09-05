@@ -1,0 +1,28 @@
+{
+  "users":[
+    {
+      "user_id":"001",
+      "name":"Vasya",
+      "email":"vasya@gmail.com",
+      "phone":"+71234567890",
+      "position":"Продавец",
+      "administrator":"false"
+    },
+    {
+      "user_id":"002",
+      "name":"Senya",
+      "email":"senya@gmail.com",
+      "phone":"+70006668811",
+      "position":"Аналитик",
+      "administrator":"true"
+    },
+    {
+      "user_id":"003",
+      "name":"Masha",
+      "email":"masha@gmail.com",
+      "phone":"+7130406080",
+      "position":"Маркетолог",
+      "administrator":"false"
+    }
+  ]
+}

@@ -33,12 +33,11 @@ exports.controller = ['$scope', '$rest', function registration($scope, $rest) {
       console.log(a);
     };
 
-    function next(data) {
+    /*function next(data) {
       $scope.commentators = data.result;
-    }
+    }*/
 
     $scope.restTest = function() {
-
       //$scope.$rest.commentators.load({}).$promise.then(next);
     };
 

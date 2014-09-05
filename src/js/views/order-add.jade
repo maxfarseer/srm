@@ -1,0 +1,31 @@
+.row
+  .col-md-12
+    h4 Добавить заказ
+
+hr
+
+form.form-horizontal(role='form')
+  .form-group
+    label.col-sm-2.control-label(for='orderName') Название
+    .col-sm-10
+      input#orderName.form-control(type='text', placeholder='Наименование товара/услуги')
+  .form-group
+    label.col-sm-2.control-label(for='orderPrice') Стоимость
+    .col-sm-10
+      input#orderPrice.form-control(type='text', placeholder='12.48')
+  .form-group
+    label.col-sm-2.control-label(for='orderQuantity') Количество
+    .col-sm-10
+      input#orderQuantity.form-control(type='text', placeholder='0.5')
+  .form-group
+    label.col-sm-2.control-label(for='orderPromo') Промо-код
+    .col-sm-10
+      input#orderPromo.form-control(type='text', placeholder='000123')
+
+  .form-group
+    .col-sm-offset-2.col-sm-10
+      button.btn.btn-default(type='submit', ng-click="order.save()") Сохранить
+
+
+.row
+  .col-md-12 {{order.saveStatus}}
