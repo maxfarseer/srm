@@ -1,7 +1,7 @@
 {
-  "orders":[
+  "objects":[
     {
-      "order_id":"001",
+      "orderid":"001",
       "affiliation":"Кукушкин двор",
       "revenue":"123",
       "shipping":"4.50",
@@ -11,7 +11,7 @@
       "created":"1409898478943"
     },
     {
-      "order_id":"002",
+      "orderid":"002",
       "affiliation":"Кукушкин двор",
       "revenue":"5124",
       "shipping":"4.50",
@@ -21,7 +21,7 @@
       "created":"1409898481943"
     },
     {
-      "order_id":"003",
+      "orderid":"003",
       "affiliation":"Кукушкин двор",
       "revenue":"24",
       "shipping":"4.50",

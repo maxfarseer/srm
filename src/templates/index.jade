@@ -2,6 +2,7 @@ doctype html
 html(ng-app="srm")
   head
     title Banana CRM
+    meta(charset='utf-8')
     link(rel="stylesheet" href="css/bootstrap.min.css")
     link(rel="stylesheet", href="css/main.css")
   body
@@ -15,7 +16,7 @@ html(ng-app="srm")
             ul.nav.navbar-nav
               li
                 a(ui-sref='registration') Регистрация
-              li
+              //-li
                 a(ui-sref='jstest') JS test
               li
                 a(ui-sref='orders') Заказы

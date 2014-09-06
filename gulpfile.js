@@ -10,7 +10,7 @@ var gulp = require('gulp'),
     connect = require('gulp-connect'),
     jasmine = require('gulp-jasmine');
 
-var outputDir = 'builds/development',
+var outputDir = 'builds/banana_dev',
     env = process.env.NODE_ENV || 'development';
 
 gulp.task('jade', function() {

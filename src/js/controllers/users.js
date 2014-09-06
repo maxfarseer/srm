@@ -12,7 +12,7 @@ exports.controller = ['$scope', '$rest', function orders($scope, $rest) {
 
 
     function next(data) {
-      if (data.users.length > 0) {
+      if (data.objects.length > 0) {
         $scope.fillUsers(data);
       }
     }
@@ -24,7 +24,7 @@ exports.controller = ['$scope', '$rest', function orders($scope, $rest) {
     $scope.loadUsers();
 
     $scope.fillUsers = function(data) {
-      $scope.users = data.users;
+      $scope.users = data.objects;
     };
 
 }];
