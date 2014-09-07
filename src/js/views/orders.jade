@@ -19,7 +19,8 @@ hr
           th Created
       tbody
         tr(ng-repeat="order in orders")
-          td {{order.orderid}}
+          td
+            a(ui-sref="/orders/{{order.orderid}}") {{order.orderid}}
           td {{order.affiliation}}
           td {{order.revenue}}
           td {{order.shipping}}

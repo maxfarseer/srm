@@ -26,6 +26,14 @@ app.config(['$stateProvider', '$urlRouterProvider', function($stateProvider, $ur
     templateUrl: staticApp + '/js/views/orders.html',
     controller: require('./controllers/orders').inject(app)
   })
+  .state('orders.detail', {
+    url: "/orders/:orderId",
+    templateUrl: staticApp + '/js/views/orders-detail.html',
+    controller: require('./controllers/orders-detail').inject(app)
+    /*controller: function ($stateParams) {
+        expect($stateParams).toBe({contactId: 42});
+    }*/
+  })
   .state('order', {
     url: '/order',
     templateUrl: staticApp + '/js/views/order.html',
