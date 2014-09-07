@@ -26,4 +26,6 @@ exports.controller = ['$scope', '$rest', '$stateParams', function ordersDetail($
       $scope.order = data.order;
     };
 
+    $scope.orderId = $stateParams.orderId;
+
 }];

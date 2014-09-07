@@ -26,8 +26,9 @@ app.config(['$stateProvider', '$urlRouterProvider', function($stateProvider, $ur
     templateUrl: staticApp + '/js/views/orders.html',
     controller: require('./controllers/orders').inject(app)
   })
-  .state('orders.detail', {
+  .state('item', {
     url: "/orders/:orderId",
+    //url: "/orders/{orderId:[0-9]{1,4}}", //regEx example in url
     templateUrl: staticApp + '/js/views/orders-detail.html',
     controller: require('./controllers/orders-detail').inject(app)
     /*controller: function ($stateParams) {

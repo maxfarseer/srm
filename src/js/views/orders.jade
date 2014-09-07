@@ -20,7 +20,7 @@ hr
       tbody
         tr(ng-repeat="order in orders")
           td
-            a(ui-sref="/orders/{{order.orderid}}") {{order.orderid}}
+            a(ui-sref="item({orderId:order.orderid})") {{order.orderid}}
           td {{order.affiliation}}
           td {{order.revenue}}
           td {{order.shipping}}
